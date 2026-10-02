@@ -80,13 +80,13 @@ def convert_distance(value: float, from_unit: str, to_unit: str) -> float:
     key = (from_unit, to_unit)
     if key not in CONVERSION_TABLE:
         raise ValueError(
-            f"No direct conversion from {from_unit!r} → {to_unit!r}. "
+            f"No direct conversion from {from_unit!r} -> {to_unit!r}. "
             f"Supported pairs: {list(CONVERSION_TABLE.keys())}"
         )
 
     factor = CONVERSION_TABLE[key]
     result = value * factor
-    logger.debug("Converting %.4f %s → %.4f %s (factor=%.6f)",
+    logger.debug("Converting %.4f %s -> %.4f %s (factor=%.6f)",
                  value, from_unit, result, to_unit, factor)
     return result
 
@@ -127,7 +127,7 @@ def display_all_conversions(value: float, from_unit: str) -> None:
     for (src, tgt), _ in CONVERSION_TABLE.items():
         if src == from_unit:
             result = convert_distance(value, src, tgt)
-            print(f"    → {result:.4f} {tgt}")
+            print(f"    -> {result:.4f} {tgt}")
 
 
 # ---------------------------------------------------------------------------

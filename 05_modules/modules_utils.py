@@ -57,9 +57,9 @@ def slugify(text: str) -> str:
         A slug string, e.g. 'hello-world'.
 
     Example:
-        slugify("Hello World!") → 'hello-world'
+        slugify("Hello World!") -> 'hello-world'
     """
     text = text.lower()
     text = re.sub(r"[^a-z0-9\s-]", "", text)   # remove non-alphanumeric
-    text = re.sub(r"[\s-]+", "-", text)          # spaces/hyphens → single hyphen
+    text = re.sub(r"[\s-]+", "-", text)          # spaces/hyphens -> single hyphen
     return text.strip("-")

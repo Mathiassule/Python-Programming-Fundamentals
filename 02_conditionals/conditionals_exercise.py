@@ -15,11 +15,11 @@ def grade_score(score: float) -> str:
     Convert a numeric score (0–100) into a letter grade.
 
     Grading scale:
-        90–100  →  A
-        80–89   →  B
-        70–79   →  C
-        60–69   →  D
-        0–59    →  F
+        90–100  ->  A
+        80–89   ->  B
+        70–79   ->  C
+        60–69   ->  D
+        0–59    ->  F
 
     Args:
         score: A numeric value between 0 and 100 (inclusive).
@@ -51,10 +51,10 @@ def categorise_bmi(weight_kg: float, height_m: float) -> str:
     Calculate BMI and return the WHO category.
 
     Categories:
-        BMI < 18.5          →  Underweight
-        18.5 ≤ BMI < 25.0   →  Normal weight
-        25.0 ≤ BMI < 30.0   →  Overweight
-        BMI ≥ 30.0          →  Obese
+        BMI < 18.5          ->  Underweight
+        18.5 ≤ BMI < 25.0   ->  Normal weight
+        25.0 ≤ BMI < 30.0   ->  Overweight
+        BMI ≥ 30.0          ->  Obese
 
     Args:
         weight_kg: Body weight in kilograms (must be > 0).
@@ -80,7 +80,7 @@ def categorise_bmi(weight_kg: float, height_m: float) -> str:
     else:
         category = "Obese"
 
-    return f"BMI = {bmi:.1f}  →  {category}"
+    return f"BMI = {bmi:.1f}  ->  {category}"
 
 
 def fizzbuzz(n: int) -> str:
@@ -88,10 +88,10 @@ def fizzbuzz(n: int) -> str:
     Classic FizzBuzz for a single number.
 
     Rules:
-        Divisible by both 3 and 5  →  'FizzBuzz'
-        Divisible by 3 only        →  'Fizz'
-        Divisible by 5 only        →  'Buzz'
-        Otherwise                  →  the number as a string
+        Divisible by both 3 and 5  ->  'FizzBuzz'
+        Divisible by 3 only        ->  'Fizz'
+        Divisible by 5 only        ->  'Buzz'
+        Otherwise                  ->  the number as a string
 
     Args:
         n: Any integer.
@@ -116,10 +116,10 @@ def ticket_price(age: int, is_member: bool) -> float:
 
     Pricing rules:
         Members always pay £5.00.
-        Under 5   →  free (£0.00)
-        5–17      →  £7.50  (child)
-        18–64     →  £12.00 (adult)
-        65+       →  £8.00  (senior)
+        Under 5   ->  free (£0.00)
+        5–17      ->  £7.50  (child)
+        18–64     ->  £12.00 (adult)
+        65+       ->  £8.00  (senior)
 
     Args:
         age:       Age in whole years (must be ≥ 0).
@@ -159,14 +159,14 @@ if __name__ == "__main__":
     # --- Grade calculator ---
     print("--- Grade Calculator ---")
     for score in [95, 83, 74, 61, 45]:
-        print(f"  Score {score:>3}  →  Grade {grade_score(score)}")
+        print(f"  Score {score:>3}  ->  Grade {grade_score(score)}")
     print()
 
     # --- BMI ---
     print("--- BMI Categoriser ---")
     examples = [(50, 1.70), (70, 1.75), (90, 1.75), (110, 1.70)]
     for w, h in examples:
-        print(f"  Weight={w}kg, Height={h}m  →  {categorise_bmi(w, h)}")
+        print(f"  Weight={w}kg, Height={h}m  ->  {categorise_bmi(w, h)}")
     print()
 
     # --- FizzBuzz 1-20 ---
@@ -181,4 +181,4 @@ if __name__ == "__main__":
     for age, member in test_cases:
         price = ticket_price(age, member)
         tag = "(member)" if member else ""
-        print(f"  Age={age:<3} {tag:<8}  →  £{price:.2f}")
+        print(f"  Age={age:<3} {tag:<8}  ->  £{price:.2f}")

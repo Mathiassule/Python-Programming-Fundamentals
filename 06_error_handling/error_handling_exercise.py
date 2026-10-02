@@ -72,7 +72,7 @@ class BankAccount:
         if amount <= 0:
             raise NegativeAmountError(amount)
         self._balance += amount
-        self._history.append(f"Deposited  £{amount:>8.2f}  →  Balance: £{self._balance:.2f}")
+        self._history.append(f"Deposited  £{amount:>8.2f}  ->  Balance: £{self._balance:.2f}")
 
     def withdraw(self, amount: float) -> None:
         """
@@ -87,7 +87,7 @@ class BankAccount:
         if amount > self._balance:
             raise InsufficientFundsError(amount, self._balance)
         self._balance -= amount
-        self._history.append(f"Withdrew   £{amount:>8.2f}  →  Balance: £{self._balance:.2f}")
+        self._history.append(f"Withdrew   £{amount:>8.2f}  ->  Balance: £{self._balance:.2f}")
 
     def print_history(self) -> None:
         """Print all transactions to stdout."""
@@ -185,7 +185,7 @@ if __name__ == "__main__":
     test_values = ["42", "3.14", "hello", "100"]
     for v in test_values:
         result = safe_parse_int(v)
-        print(f"  parse({v!r}) → {result}")
+        print(f"  parse({v!r}) -> {result}")
     print()
 
     # --- FileNotFoundError ---

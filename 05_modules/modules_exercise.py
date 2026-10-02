@@ -37,7 +37,7 @@ def math_demo() -> None:
 
 def random_demo() -> None:
     """Show off several random module capabilities."""
-    random.seed(42)   # Fixed seed → reproducible output
+    random.seed(42)   # Fixed seed -> reproducible output
     print("--- random module (seed=42) ---")
     print(f"  random.randint(1, 100)  = {random.randint(1, 100)}")
     print(f"  random.uniform(0, 1)    = {random.uniform(0, 1):.4f}")
@@ -83,7 +83,7 @@ def our_utils_demo() -> None:
     print("--- our modules_utils module ---")
     temps_c = [0, 20, 37, 100]
     for c in temps_c:
-        print(f"  {c}°C  →  {celsius_to_fahrenheit(c):.1f}°F")
+        print(f"  {c}°C  ->  {celsius_to_fahrenheit(c):.1f}°F")
     print()
 
     words = ["racecar", "hello", "level", "Python", "madam"]
@@ -94,7 +94,7 @@ def our_utils_demo() -> None:
 
     titles = ["Hello World", "Python Programming 101", "my-cool article!"]
     for title in titles:
-        print(f"  slugify({title!r}) → {slugify(title)!r}")
+        print(f"  slugify({title!r}) -> {slugify(title)!r}")
     print()
 
 

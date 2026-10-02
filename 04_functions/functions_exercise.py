@@ -142,7 +142,7 @@ def make_multiplier(factor: float) -> Callable[[float], float]:
         factor: The multiplier.
 
     Returns:
-        A function float → float.
+        A function float -> float.
     """
     def multiplier(x: float) -> float:
         return x * factor
@@ -188,5 +188,5 @@ if __name__ == "__main__":
 
     # Higher-order
     double = make_multiplier(2)
-    print(f"apply_twice(double, 3) → {apply_twice(double, 3)}")
-    print(f"apply_twice(lambda x: x+1, 10) → {apply_twice(lambda x: x + 1, 10)}")
+    print(f"apply_twice(double, 3) -> {apply_twice(double, 3)}")
+    print(f"apply_twice(lambda x: x+1, 10) -> {apply_twice(lambda x: x + 1, 10)}")

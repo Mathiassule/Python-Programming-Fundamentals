@@ -17,7 +17,7 @@ def sum_of_multiples(limit: int, *factors: int) -> int:
     multiples of ANY of the given factors.
 
     Example:
-        sum_of_multiples(10, 3, 5) → 23  (3+5+6+9 = 23)
+        sum_of_multiples(10, 3, 5) -> 23  (3+5+6+9 = 23)
 
     Args:
         limit:   Upper bound (exclusive).
@@ -68,7 +68,7 @@ def flatten(nested: list) -> list:
         A new flat list.
 
     Example:
-        flatten([[1, 2], [3, 4], [5]]) → [1, 2, 3, 4, 5]
+        flatten([[1, 2], [3, 4], [5]]) -> [1, 2, 3, 4, 5]
     """
     flat = []
     for sublist in nested:
@@ -82,7 +82,7 @@ def multiplication_table(size: int) -> list[list[int]]:
     Generate an n×n multiplication table as a list of lists.
 
     Args:
-        size: Dimension of the table (e.g. 5 → 5×5 table).
+        size: Dimension of the table (e.g. 5 -> 5×5 table).
 
     Returns:
         A 2-D list where result[i][j] = (i+1) * (j+1).
@@ -163,7 +163,7 @@ if __name__ == "__main__":
     # Flatten
     nested_lists = [[1, 2, 3], [4, 5], [6, 7, 8, 9]]
     print(f"Flatten {nested_lists}")
-    print("  →", flatten(nested_lists))
+    print("  ->", flatten(nested_lists))
     print()
 
     # Multiplication table (4×4)
@@ -176,7 +176,7 @@ if __name__ == "__main__":
 
     # First prime above
     for base in [10, 20, 50, 100]:
-        print(f"First prime above {base:>3} → {first_prime_above(base)}")
+        print(f"First prime above {base:>3} -> {first_prime_above(base)}")
     print()
 
     # Word frequency
