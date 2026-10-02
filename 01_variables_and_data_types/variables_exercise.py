@@ -23,7 +23,7 @@ def describe_person(name: str, age: int, height_cm: float, is_student: bool) -> 
         A formatted string describing the person.
     """
     status = "a student" if is_student else "not a student"
-    height_m = height_cm / 100  # convert centimetres -> metres
+    height_m = height_cm / 100  # convert centimetres → metres
 
     return (
         f"Name   : {name}\n"
@@ -53,11 +53,11 @@ def type_conversion_demo() -> None:
     flag_as_int: int = int(flag)               # 1
 
     print("=== Type Conversion Demo ===")
-    print(f"  int    {whole_number!r:>8}  ->  float  {as_float!r}")
-    print(f"  float  {as_float * 1.5!r:>8}  ->  int    {back_to_int!r}  (truncated)")
-    print(f"  str    {price_str!r:>8}  ->  float  {price_float!r}")
-    print(f"  float  {price_float!r:>8}  ->  int    {price_int!r}  (truncated)")
-    print(f"  bool   {flag!r:>8}  ->  int    {flag_as_int!r}")
+    print(f"  int    {whole_number!r:>8}  →  float  {as_float!r}")
+    print(f"  float  {as_float * 1.5!r:>8}  →  int    {back_to_int!r}  (truncated)")
+    print(f"  str    {price_str!r:>8}  →  float  {price_float!r}")
+    print(f"  float  {price_float!r:>8}  →  int    {price_int!r}  (truncated)")
+    print(f"  bool   {flag!r:>8}  →  int    {flag_as_int!r}")
     print()
 
 
