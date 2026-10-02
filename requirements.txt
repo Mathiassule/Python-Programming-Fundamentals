@@ -1,0 +1,6 @@
+# Runtime dependencies
+# ---------------------
+# All exercises use only the Python standard library.
+# pytest is required only to run the automated tests.
+
+pytest>=7.4.0
